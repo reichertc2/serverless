@@ -9,7 +9,7 @@ class handler(BaseHTTPRequestHandler):
         url_components = parse.urlsplit(s)
         query_string_list = parse.parse_qsl(url_components.query)
         query_string_list = int(query_string_list)
-        if query_string_list < 0:
+        if query_string_list < 0 or query_string_list==None:
             random_number = "not positive, think positive"
         random_number = random.randrange(0, query_string_list)
 
