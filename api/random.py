@@ -9,6 +9,7 @@ class handler(BaseHTTPRequestHandler):
         s = self.path
         url_components = parse.urlsplit(s)
         query_string_list = parse.parse_qsl(url_components.query)
+        
         if query_string_list<0:
             random_number = 'not positive, think positive'
         random_number = random.randrange(0,query_string_list)
@@ -16,5 +17,5 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()
-        message = f'Your random number is {random_number}'
+        message = str(f'Your random number is {random_number}')
         self.wfile.write(message.encode())
