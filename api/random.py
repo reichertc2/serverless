@@ -8,7 +8,10 @@ class handler(BaseHTTPRequestHandler):
         s = self.path
         url_components = parse.urlsplit(s)
         query_string_list = parse.parse_qsl(url_components.query)
-        num = int(query_string_list)
+        dic = dict(query_string_list)
+        number = dic.get('number')
+
+        num = int(number)
         if num < 0 or num==None:
             random_number = "not positive, think positive"
         random_number = random.randrange(0, num)
