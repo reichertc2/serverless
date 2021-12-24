@@ -7,9 +7,11 @@ As deployment practices evolve `Serverless` computing has emerged as an efficien
 ```https://serverless-flame-sigma.vercel.app/```
 
 
-#### Execute
+#### Execution Process
 
-To execute ```https://serverless-flame-sigma.vercel.app/api/random?number=``` enter in positive number. Edge cases of no number or negative not quite handled yet.
-
-Should return a number between 0 and entered number in a string message.
+To execute perform the following:
+- Place the following URL in your browser: ```https://serverless-flame-sigma.vercel.app/api/random?number=```  
+- Enter in positive number. 
+    - Edge cases of no number or negative not quite handled yet.
+- Should return a number between 0 and entered number in a string message.
 
